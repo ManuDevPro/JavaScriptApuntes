@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ej10</title>
 </head>
+
 <body>
     <script>
 
@@ -33,14 +35,24 @@ Escríbelo tú. Si te bloqueas, dame solo lo que hayas conseguido y te daré una
 
 
         const productos = [
-    { nombre: "Portátil", precio: 900, stock: 3 },
-    { nombre: "Ratón", precio: 25, stock: 15 },
-    { nombre: "Monitor", precio: 250, stock: 0 },
-    { nombre: "Cámara", precio: 150, stock: 7 },
-    { nombre: "Teclado", precio: 80, stock: 2 }
-];
+            { nombre: "Portátil", precio: 900, stock: 3 },
+            { nombre: "Ratón", precio: 25, stock: 15 },
+            { nombre: "Monitor", precio: 250, stock: 0 },
+            { nombre: "Cámara", precio: 150, stock: 7 },
+            { nombre: "Teclado", precio: 80, stock: 2 }
+        ];
 
 
+        const disponibles = productos
+        .filter((producto) => producto.stock > 0)
+        .sort((a, b ) => {
+            if (a.precio === b.precio){
+                return b.stock - a.stock
+            }
+            return a.precio - b.precio
+        });
+        console.log(disponibles);
+        
 
 
 
@@ -63,4 +75,5 @@ Escríbelo tú. Si te bloqueas, dame solo lo que hayas conseguido y te daré una
 
     </script>
 </body>
+
 </html>

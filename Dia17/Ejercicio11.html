@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej11</title>
+</head>
+
+<body>
+    <script>
+
+        /*
+        Reto de integración
+
+Ahora quiero comprobar que puedes combinar varias herramientas que ya conoces, sin darte la receta.
+
+Tenemos:
+
+const usuarios = [
+    { nombre: "Ana", edad: 30, puntos: 80, activo: true },
+    { nombre: "Carlos", edad: 25, puntos: 95, activo: false },
+    { nombre: "Laura", edad: 30, puntos: 90, activo: true },
+    { nombre: "Pedro", edad: 25, puntos: 70, activo: true },
+    { nombre: "Sofía", edad: 30, puntos: 85, activo: false },
+    { nombre: "David", edad: 22, puntos: 88, activo: true }
+];
+🎯 Tu misión
+
+Quiero obtener únicamente los usuarios activos.
+
+Después:
+
+Ordenarlos por puntos de mayor a menor.
+Si tienen los mismos puntos, ordenar por edad de menor a mayor.
+Hazlo mediante chaining.
+Guarda el resultado en una constante llamada usuariosOrdenados.
+
+No te doy la estructura.
+        */
+
+        const usuarios = [
+            { nombre: "Ana", edad: 30, puntos: 80, activo: true },
+            { nombre: "Carlos", edad: 25, puntos: 95, activo: false },
+            { nombre: "Laura", edad: 30, puntos: 90, activo: true },
+            { nombre: "Pedro", edad: 25, puntos: 70, activo: true },
+            { nombre: "Sofía", edad: 30, puntos: 85, activo: false },
+            { nombre: "David", edad: 22, puntos: 88, activo: true }
+        ];
+
+        const usuariosOrdenados = usuarios
+            .filter((usuario) => usuario.activo === true)
+            .sort((a, b) => {
+                if(a.puntos === b.puntos){
+                    return a.edad - b.edad
+                }
+                return b.puntos - a.puntos
+            });
+            console.log(usuariosOrdenados);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

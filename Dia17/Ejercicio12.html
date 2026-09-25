@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej12</title>
+</head>
+
+<body>
+    <script>
+
+
+        /*
+        Reto final de sort()
+const productos = [
+    { nombre: "Portátil", precio: 900, stock: 3 },
+    { nombre: "Ratón", precio: 25, stock: 15 },
+    { nombre: "Monitor", precio: 250, stock: 0 },
+    { nombre: "Cámara", precio: 150, stock: 7 },
+    { nombre: "Teclado", precio: 80, stock: 2 },
+    { nombre: "Webcam", precio: 80, stock: 10 }
+];
+
+Quiero obtener:
+
+Solo productos con stock.
+Ordenados por precio de mayor a menor.
+Si dos productos tienen el mismo precio, por stock de mayor a menor.
+Si también tienen el mismo stock, por nombre alfabéticamente.
+Todo mediante chaining.
+⚠️ La trampa
+
+El tercer criterio ya no es numérico.
+
+Vas a tener que pensar cómo comparar:
+
+a.nombre
+b.nombre
+
+No te voy a explicar cómo hacerlo todavía.
+
+Hazlo tú desde cero.
+        */
+
+        const productos = [
+            { nombre: "Portátil", precio: 900, stock: 3 },
+            { nombre: "Ratón", precio: 25, stock: 15 },
+            { nombre: "Monitor", precio: 250, stock: 0 },
+            { nombre: "Cámara", precio: 150, stock: 7 },
+            { nombre: "Teclado", precio: 80, stock: 2 },
+            { nombre: "Webcam", precio: 80, stock: 10 },
+            { nombre: "Tablet", precio: 80, stock: 10 },
+            { nombre: "Altavoz", precio: 80, stock: 10 }
+        ];
+        const disponibles = productos
+    .filter((producto) => producto.stock > 0)
+    .sort((a, b) => {
+
+        if (a.precio === b.precio) {
+
+            if (a.stock === b.stock) {
+                return a.nombre.localeCompare(b.nombre);
+            }
+
+            return b.stock - a.stock;
+        }
+
+        return b.precio - a.precio;
+    });
+
+console.log(disponibles);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
