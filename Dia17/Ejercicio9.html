@@ -1,18 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-
-
-
-        /*
+      /*
         Tenemos:
 
 const usuarios = [
@@ -41,59 +37,24 @@ Es normal que este ejercicio te cueste más que los anteriores.
 Escribe tu intento aunque no estés seguro. Yo te voy guiando.
         */
 
+      const usuarios = [
+        { nombre: "Ana", edad: 30, puntos: 80 },
+        { nombre: "Carlos", edad: 25, puntos: 95 },
+        { nombre: "Laura", edad: 30, puntos: 90 },
+        { nombre: "Pedro", edad: 25, puntos: 70 },
+        { nombre: "Sofía", edad: 30, puntos: 85 },
+      ];
 
-        const usuarios = [
-            { nombre: "Ana", edad: 30, puntos: 80 },
-            { nombre: "Carlos", edad: 25, puntos: 95 },
-            { nombre: "Laura", edad: 30, puntos: 90 },
-            { nombre: "Pedro", edad: 25, puntos: 70 },
-            { nombre: "Sofía", edad: 30, puntos: 85 }
-        ];
+      function ordenTotal(usuarios) {
+        const ordenEdad = usuarios.sort((a, b) => b.edad - a.edad);
+        if (usuarios.edad == usuarios.edad) {
+          return usuarios;
+        } else if (usuarios.eddad != usuarios.edad) {
+          usuarios.sort((a, b) => b.puntos - a.puntos);
+        }
+      }
 
-
-
-
-        
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      console.log(ordenTotal(usuarios));
     </script>
-</body>
-
+  </body>
 </html>

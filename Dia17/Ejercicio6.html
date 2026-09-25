@@ -1,15 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        /*
+      /*
         Tenemos:
 
 const productos = [
@@ -26,29 +25,27 @@ Aquí ya vamos a combinar dos cosas que conoces.
 No te voy a decir todavía cuáles son.
         */
 
-        const productos = [
-            { nombre: "Portátil", precio: 900 },
-            { nombre: "Ratón", precio: 25 },
-            { nombre: "Monitor", precio: 250 },
-            { nombre: "Cámara", precio: 150 }
-        ];
+      // const productos = [
+      //     { nombre: "Portátil", precio: 900 },
+      //     { nombre: "Ratón", precio: 25 },
+      //     { nombre: "Monitor", precio: 250 },
+      //     { nombre: "Cámara", precio: 150 }
+      // ];
 
+      // const masCaros = productos.filter((producto) => producto.precio > 100);
+      // const orden = masCaros.sort((a, b) => a.precio - b.precio);
+      // console.log(orden);
 
-        const masCaros = productos.filter((producto) => producto.precio > 100);
-        const orden = masCaros.sort((a, b) => a.precio - b.precio);
-        console.log(orden);
+      const productos = [
+        { nombre: "Portátil", precio: 900 },
+        { nombre: "Ratón", precio: 25 },
+        { nombre: "Monitor", precio: 250 },
+        { nombre: "Cámara", precio: 150 },
+      ];
 
-
-
-
-
-
-
-
-
-
-
+      const caros = productos.filter((producto) => producto.precio > 100);
+      const orden = caros.sort((a, b) => b.precio - a.precio);
+      console.log(orden);
     </script>
-</body>
-
+  </body>
 </html>

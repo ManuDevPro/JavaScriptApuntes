@@ -1,21 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-
-
-
-
-
-
-        /*
+      /*
         Tenemos:
 
 const productos = [
@@ -44,50 +37,31 @@ Nada más.
 Piensa qué método va primero y cuál después.
         */
 
+      // const productos = [
+      //     { nombre: "Portátil", precio: 900, stock: 3 },
+      //     { nombre: "Ratón", precio: 25, stock: 15 },
+      //     { nombre: "Monitor", precio: 250, stock: 0 },
+      //     { nombre: "Cámara", precio: 150, stock: 7 },
+      //     { nombre: "Teclado", precio: 80, stock: 2 }
+      // ];
 
-        const productos = [
-            { nombre: "Portátil", precio: 900, stock: 3 },
-            { nombre: "Ratón", precio: 25, stock: 15 },
-            { nombre: "Monitor", precio: 250, stock: 0 },
-            { nombre: "Cámara", precio: 150, stock: 7 },
-            { nombre: "Teclado", precio: 80, stock: 2 }
-        ];
+      // const disponibles = productos
+      // .filter((producto) => producto.stock > 0)
+      // .sort((a, b) => b.precio - a.precio);
+      // console.log(disponibles);
 
-        const disponibles = productos
+      const productos = [
+        { nombre: "Portátil", precio: 900, stock: 3 },
+        { nombre: "Ratón", precio: 25, stock: 15 },
+        { nombre: "Monitor", precio: 250, stock: 0 },
+        { nombre: "Cámara", precio: 150, stock: 7 },
+        { nombre: "Teclado", precio: 80, stock: 2 },
+      ];
+
+      const disponibles = productos
         .filter((producto) => producto.stock > 0)
-        .sort((a, b) => b.precio - a.precio);
-        console.log(disponibles);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        .sort((a, b) => b.stock - a.stock);
+      console.log(disponibles);
     </script>
-</body>
-
+  </body>
 </html>

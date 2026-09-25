@@ -1,68 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
+      /*
+      Tenemos:
 
-/*
-Tenemos:
+      const usuarios = [
+          { nombre: "Ana", edad: 28 },
+          { nombre: "Carlos", edad: 19 },
+          { nombre: "Laura", edad: 35 },
+          { nombre: "Pedro", edad: 24 },
+          { nombre: "Sofía", edad: 31 }
+      ];
+      🎯 Reto
 
-const usuarios = [
-    { nombre: "Ana", edad: 28 },
-    { nombre: "Carlos", edad: 19 },
-    { nombre: "Laura", edad: 35 },
-    { nombre: "Pedro", edad: 24 },
-    { nombre: "Sofía", edad: 31 }
-];
-🎯 Reto
+      Quiero que obtengas:
 
-Quiero que obtengas:
+      los usuarios mayores de 20 años, ordenados de mayor a menor edad.
 
-los usuarios mayores de 20 años, ordenados de mayor a menor edad.
+      No te digo qué métodos utilizar.
 
-No te digo qué métodos utilizar.
+      Ya tienes las herramientas necesarias.
 
-Ya tienes las herramientas necesarias.
+      Hazlo tú.
+      */
 
-Hazlo tú.
-*/
+      // const usuarios = [
+      //     { nombre: "Ana", edad: 28 },
+      //     { nombre: "Carlos", edad: 19 },
+      //     { nombre: "Laura", edad: 35 },
+      //     { nombre: "Pedro", edad: 24 },
+      //     { nombre: "Sofía", edad: 31 }
+      // ];
 
-const usuarios = [
-    { nombre: "Ana", edad: 28 },
-    { nombre: "Carlos", edad: 19 },
-    { nombre: "Laura", edad: 35 },
-    { nombre: "Pedro", edad: 24 },
-    { nombre: "Sofía", edad: 31 }
-];
+      // const mayores = usuarios.filter((usuario) => usuario.edad > 20);
+      // const orden = mayores.sort((a, b) => b.edad - a.edad);
+      // console.log(orden);
 
-const mayores = usuarios.filter((usuario) => usuario.edad > 20);
-const orden = mayores.sort((a, b) => b.edad - a.edad);
-console.log(orden);
+      const usuarios = [
+        { nombre: "Ana", edad: 28 },
+        { nombre: "Carlos", edad: 19 },
+        { nombre: "Laura", edad: 35 },
+        { nombre: "Pedro", edad: 24 },
+        { nombre: "Sofía", edad: 31 },
+      ];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      const mayores = usuarios.filter((usuario) => usuario.edad > 20);
+      const orden = mayores.sort((a, b) => b.edad - a.edad);
+      console.log(orden);
     </script>
-</body>
+  </body>
 </html>
