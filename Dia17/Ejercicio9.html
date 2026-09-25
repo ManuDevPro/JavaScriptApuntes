@@ -44,17 +44,19 @@ Escribe tu intento aunque no estés seguro. Yo te voy guiando.
         { nombre: "Pedro", edad: 25, puntos: 70 },
         { nombre: "Sofía", edad: 30, puntos: 85 },
       ];
+      const orden = usuarios.sort((a, b) => {
 
-      function ordenTotal(usuarios) {
-        const ordenEdad = usuarios.sort((a, b) => b.edad - a.edad);
-        if (usuarios.edad == usuarios.edad) {
-          return usuarios;
-        } else if (usuarios.eddad != usuarios.edad) {
-          usuarios.sort((a, b) => b.puntos - a.puntos);
-        }
-      }
+    if (a.edad == b.edad) {
+        return b.puntos - a.puntos;
+    }
 
-      console.log(ordenTotal(usuarios));
+    return a.edad - b.edad;
+
+});
+console.log(orden);
+
+
+
     </script>
   </body>
 </html>
