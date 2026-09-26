@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 13</title>
+</head>
+
+<body>
+    <script>
+
+        /*
+        Tenemos:
+
+const productos = [
+    { nombre: "Portátil", precio: 900, stock: 3 },
+    { nombre: "Ratón", precio: 25, stock: 15 },
+    { nombre: "Monitor", precio: 250, stock: 0 },
+    { nombre: "Cámara", precio: 150, stock: 7 },
+    { nombre: "Teclado", precio: 80, stock: 2 }
+];
+
+Quiero que obtengas un nuevo array que contenga solamente los nombres de los productos que tienen stock.
+
+El resultado debería ser:
+
+[
+    "Portátil",
+    "Ratón",
+    "Cámara",
+    "Teclado"
+]
+🧠 Pero hay una regla
+
+No quiero que uses for.
+
+Quiero que pienses:
+
+¿Qué método que ya conozco me permite transformar cada objeto en otra cosa?
+
+No te doy la respuesta.
+
+Escríbeme tu código.
+        */
+
+        const productos = [
+            { nombre: "Portátil", precio: 900, stock: 3 },
+            { nombre: "Ratón", precio: 25, stock: 15 },
+            { nombre: "Monitor", precio: 250, stock: 0 },
+            { nombre: "Cámara", precio: 150, stock: 7 },
+            { nombre: "Teclado", precio: 80, stock: 2 }
+        ];
+
+        const seleccion = productos
+        .filter((producto) => producto.stock > 0)
+        .map((producto) => producto.nombre);
+
+        console.log(seleccion);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

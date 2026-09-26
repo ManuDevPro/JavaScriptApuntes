@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej15</title>
+</head>
+
+<body>
+    <script>
+
+
+        /*
+        Reto: filter() + map()
+
+Tenemos:
+
+const productos = [
+    { nombre: "Portátil", precio: 900, stock: 3 },
+    { nombre: "Ratón", precio: 25, stock: 15 },
+    { nombre: "Monitor", precio: 250, stock: 0 },
+    { nombre: "Cámara", precio: 150, stock: 7 },
+    { nombre: "Teclado", precio: 80, stock: 2 }
+];
+
+Quiero obtener un nuevo array con solo los productos que tienen stock, pero transformados en objetos que tengan únicamente:
+
+{
+    nombre: "...",
+    precio: ...
+}
+
+El resultado debería ser:
+
+[
+    { nombre: "Portátil", precio: 900 },
+    { nombre: "Ratón", precio: 25 },
+    { nombre: "Cámara", precio: 150 },
+    { nombre: "Teclado", precio: 80 }
+]
+🎯 Condiciones
+Usa filter().
+Usa map().
+Usa chaining.
+No uses for.
+No te doy la estructura.
+
+Piensa en el orden:
+
+primero seleccionamos → después transformamos.
+
+Escríbelo tú, Manu. 💪
+        */
+
+        const productos = [
+            { nombre: "Portátil", precio: 900, stock: 3 },
+            { nombre: "Ratón", precio: 25, stock: 15 },
+            { nombre: "Monitor", precio: 250, stock: 0 },
+            { nombre: "Cámara", precio: 150, stock: 7 },
+            { nombre: "Teclado", precio: 80, stock: 2 }
+        ];
+
+        const seleccion = productos
+            .filter((producto) => producto.stock > 0)
+            .map((producto) => {
+                return{
+                    nombre: producto.nombre,
+                    precio: producto.precio
+                }
+            });
+
+            console.log(seleccion);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

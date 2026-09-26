@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej14</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Quiero que hagas algo que aparece muchísimo en aplicaciones reales:
+        
+        Tenemos los mismos productos y queremos obtener un nuevo array de objetos, pero cada objeto debe tener solamente:
+        
+        {
+            nombre: ...,
+            precioConIVA: ...
+        }
+        
+        Usaremos un IVA del 21%.
+        
+        Por ejemplo, el portátil debería convertirse en:
+        
+        {
+            nombre: "Portátil",
+            precioConIVA: 1089
+        }
+        Tu misión
+        
+        Usa map() para crear ese nuevo array.
+        
+        No uses filter() esta vez.
+        
+        Y recuerda: map() sirve para transformar cada elemento en otra cosa.
+        */
+
+        const productos = [
+            { nombre: "Portátil", precio: 900, stock: 3 },
+            { nombre: "Ratón", precio: 25, stock: 15 },
+            { nombre: "Monitor", precio: 250, stock: 0 },
+            { nombre: "Cámara", precio: 150, stock: 7 },
+            { nombre: "Teclado", precio: 80, stock: 2 }
+        ];
+
+        const nuevoArray = productos.map((producto) => {
+            return {
+                nombre: producto.nombre,
+                productoConIVA: producto.precio + (producto.precio * 21 / 100)
+            }
+        });
+        console.log(nuevoArray);
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
