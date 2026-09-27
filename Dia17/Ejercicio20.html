@@ -77,6 +77,17 @@ Hazlo completamente desde cero y pásame tu código. Si te atascas, no te daré 
             { nombre: "Auriculares", precio: 60, stock: 10 }
         ];
 
+        const seleccion = productos.filter((producto) => producto.stock > 3)
+            .map((producto) => {
+                return {
+                    nombre: producto.nombre,
+                    precio: producto.precio,
+                    stock: producto.stock
+                }
+            })
+            .reduce((acumulador, producto) => acumulador + (producto.precio * producto.stock),0 )
+
+        console.log(seleccion);
     </script>
 
 

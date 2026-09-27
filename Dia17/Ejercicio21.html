@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej21</title>
+</head>
+
+<body>
+    <!--
+
+Reto — reduce() por tu cuenta
+
+Tenemos:
+
+const ventas = [
+    { producto: "Laptop", cantidad: 2, precio: 1200 },
+    { producto: "Ratón", cantidad: 5, precio: 25 },
+    { producto: "Teclado", cantidad: 3, precio: 80 },
+    { producto: "Monitor", cantidad: 2, precio: 300 }
+];
+🎯 Objetivo
+
+Calcula el dinero total generado por todas las ventas.
+
+Para cada elemento:
+
+cantidad × precio
+
+y después debes sumar todos esos resultados.
+
+El resultado final debe ser un único número.
+
+Reglas
+
+Esta vez quiero únicamente:
+
+reduce()
+
+No for, no map(), no filter().
+
+Y no te voy a dar la estructura del reduce().
+
+Quiero que recuerdes tú cómo construirlo.
+
+-->
+
+    <script>
+
+        const ventas = [
+            { producto: "Laptop", cantidad: 2, precio: 1200 },
+            { producto: "Ratón", cantidad: 5, precio: 25 },
+            { producto: "Teclado", cantidad: 3, precio: 80 },
+            { producto: "Monitor", cantidad: 2, precio: 300 }
+        ];
+
+
+        const valorTotal = ventas.reduce((acumulador, venta) => acumulador + (venta.precio * venta.cantidad),0 )
+        console.log(valorTotal);
+
+
+    </script>
+</body>
+
+</html>

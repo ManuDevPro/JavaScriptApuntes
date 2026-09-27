@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej22</title>
+</head>
+
+<body>
+    <!--
+    
+    Problema real de datos
+
+Tenemos:
+
+const productos = [
+    { nombre: "Laptop", precio: 1200, stock: 5, categoria: "Tecnologia" },
+    { nombre: "Ratón", precio: 25, stock: 0, categoria: "Tecnologia" },
+    { nombre: "Teclado", precio: 80, stock: 3, categoria: "Tecnologia" },
+    { nombre: "Monitor", precio: 300, stock: 2, categoria: "Tecnologia" },
+    { nombre: "Auriculares", precio: 60, stock: 10, categoria: "Audio" },
+    { nombre: "Micrófono", precio: 150, stock: 4, categoria: "Audio" }
+];
+🎯 Objetivo
+
+Queremos obtener el valor total del inventario disponible de la categoría "Tecnologia".
+
+Es decir:
+
+Solo productos de categoría "Tecnologia".
+Solo productos que tengan stock > 0.
+Para cada uno, calcular precio × stock.
+Finalmente, obtener un único número con la suma total.
+Reglas
+
+Puedes utilizar las herramientas que ya hemos trabajado:
+
+filter()
+map()
+reduce()
+chaining
+
+Tú decides cuáles necesitas y en qué orden.
+    
+    -->
+
+
+
+    <script>
+
+
+        const productos = [
+            { nombre: "Laptop", precio: 1200, stock: 5, categoria: "Tecnologia" },
+            { nombre: "Ratón", precio: 25, stock: 0, categoria: "Tecnologia" },
+            { nombre: "Teclado", precio: 80, stock: 3, categoria: "Tecnologia" },
+            { nombre: "Monitor", precio: 300, stock: 2, categoria: "Tecnologia" },
+            { nombre: "Auriculares", precio: 60, stock: 10, categoria: "Audio" },
+            { nombre: "Micrófono", precio: 150, stock: 4, categoria: "Audio" }
+        ];
+
+        const tecnologia = productos.filter((producto) => producto.categoria === "Tecnologia" && producto.stock > 0)
+        .map((producto) => {
+            return {
+                nombre: producto.nombre,
+                precio: producto.precio,
+                stock: producto.stock
+            }
+        })
+        .reduce((acumulador,producto)=> acumulador + (producto.precio * producto.stock),0 );
+        console.log(tecnologia);
+
+
+
+    </script>
+</body>
+
+</html>

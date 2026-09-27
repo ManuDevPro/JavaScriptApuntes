@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej23</title>
+</head>
+
+<body>
+    <!--
+    
+    🟦 reduce() — construir información
+
+Hasta ahora has utilizado reduce() para terminar en un número.
+
+Ahora quiero que hagas algo diferente:
+
+usar reduce() para construir un objeto.
+
+Tenemos estas ventas:
+
+const ventas = [
+    { producto: "Laptop", categoria: "Tecnologia", cantidad: 2 },
+    { producto: "Ratón", categoria: "Tecnologia", cantidad: 5 },
+    { producto: "Teclado", categoria: "Tecnologia", cantidad: 3 },
+    { producto: "Auriculares", categoria: "Audio", cantidad: 10 },
+    { producto: "Micrófono", categoria: "Audio", cantidad: 4 },
+    { producto: "Altavoz", categoria: "Audio", cantidad: 6 }
+];
+🎯 Objetivo
+
+Queremos saber cuántas unidades se han vendido de cada categoría.
+
+El resultado debe ser un objeto parecido a:
+
+{
+    Tecnologia: 10,
+    Audio: 20
+}
+
+Porque:
+
+Tecnologia → 2 + 5 + 3 = 10
+Audio      → 10 + 4 + 6 = 20
+🧠 El reto
+
+Esta vez solo necesitas:
+
+reduce()
+
+No filter(), no map(), no for.
+
+Pero hay una diferencia importante respecto a los reduce() anteriores:
+
+Antes hacíamos:
+
+0 → 10 → 20 → 30
+
+Ahora el acumulador no será un número.
+
+Será un objeto que iremos construyendo.
+
+No te voy a dar la estructura del reduce().
+
+Piensa en estas dos preguntas:
+
+¿Con qué valor inicial debería empezar el acumulador si quiero construir un objeto?
+En cada venta, ¿cómo puedo acceder a la categoría y aumentar su cantidad?
+
+Hazlo desde cero.
+    
+    -->
+</body>
+
+</html>
