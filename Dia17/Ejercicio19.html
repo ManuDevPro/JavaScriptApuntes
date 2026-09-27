@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej19</title>
+</head>
+
+<body>
+    <!--
+    
+    
+    Transformación con cálculo
+
+Tenemos estos productos:
+
+const productos = [
+    { nombre: "Laptop", precio: 1200, stock: 5 },
+    { nombre: "Ratón", precio: 25, stock: 8 },
+    { nombre: "Teclado", precio: 80, stock: 3 },
+    { nombre: "Monitor", precio: 300, stock: 2 },
+    { nombre: "Auriculares", precio: 60, stock: 10 }
+];
+
+Quiero que obtengas solo los productos cuyo stock sea mayor que 3.
+
+Después, mediante map(), cada producto debe convertirse en:
+
+{
+    nombre: ...,
+    stock: ...,
+    valorStock: ...
+}
+
+Donde:
+
+valorStock = precio × stock
+
+Por ejemplo, la Laptop tendría:
+
+{
+    nombre: "Laptop",
+    stock: 5,
+    valorStock: 6000
+}
+Reglas
+
+Usa:
+
+filter()
+map()
+
+y chaining.
+
+No uses for.
+
+No te doy la estructura del código. Quiero que tú decidas cómo construirla.
+
+    
+    -->
+
+    <script>
+        const productos = [
+            { nombre: "Laptop", precio: 1200, stock: 5 },
+            { nombre: "Ratón", precio: 25, stock: 8 },
+            { nombre: "Teclado", precio: 80, stock: 3 },
+            { nombre: "Monitor", precio: 300, stock: 2 },
+            { nombre: "Auriculares", precio: 60, stock: 10 },
+        ];
+
+        const seleccion = productos
+            .filter((producto) => producto.stock > 3)
+            .map((producto) => {
+                return {
+                    nombre: producto.nombre,
+                    stock: producto.stock,
+                    valorDeStock: producto.precio * producto.stock,
+                };
+            });
+
+        console.log(seleccion);
+    </script>
+</body>
+
+</html>

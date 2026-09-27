@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eje18</title>
+  </head>
+  <body>
+    <!--
+    Ahora quiero que empieces a pensar en transformaciones más reales, pero todavía sin introducir ningún método nuevo.
+
+Tenemos:
+
+const productos = [
+    { nombre: "Laptop", precio: 1200, stock: 5 },
+    { nombre: "Ratón", precio: 25, stock: 0 },
+    { nombre: "Teclado", precio: 80, stock: 3 },
+    { nombre: "Monitor", precio: 300, stock: 2 },
+    { nombre: "Auriculares", precio: 60, stock: 0 }
+];
+🎯 Tu misión
+
+Quiero obtener solo los productos que tengan stock, pero el resultado debe ser un nuevo array de objetos con:
+
+nombre
+precio
+precioConIVA
+
+El precioConIVA debe incluir un 21% de IVA.
+
+El resultado esperado conceptualmente es:
+
+[
+    { nombre: "Laptop", precio: 1200, precioConIVA: 1452 },
+    { nombre: "Teclado", precio: 80, precioConIVA: 96.8 },
+    { nombre: "Monitor", precio: 300, precioConIVA: 363 }
+]
+Reglas
+
+Usa:
+
+filter()
+map()
+chaining
+ningún for
+
+No te doy la estructura. Quiero que esta vez seas tú quien decida cómo construirla.
+    -->
+
+    <script>
+
+
+
+
+
+
+      const productos = [
+        { nombre: "Laptop", precio: 1200, stock: 5 },
+        { nombre: "Ratón", precio: 25, stock: 0 },
+        { nombre: "Teclado", precio: 80, stock: 3 },
+        { nombre: "Monitor", precio: 300, stock: 2 },
+        { nombre: "Auriculares", precio: 60, stock: 0 },
+      ];
+
+      const sel = productos.filter((producto) => producto.stock > 0)
+      .map((producto) => {
+        return {
+            nombre: producto.nombre,
+            precio: producto.precio,
+            precioConIVA: producto.precio + (producto.precio * 21 / 100)
+        }
+      });
+
+      console.log(sel);
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

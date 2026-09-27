@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej17Comprension</title>
+  </head>
+  <body>
+    <script>
+      /*
+Prueba de comprensión
+
+Tenemos:
+
+const usuarios = [
+    { nombre: "Ana", edad: 30, activo: true },
+    { nombre: "Carlos", edad: 19, activo: false },
+    { nombre: "Laura", edad: 25, activo: true },
+    { nombre: "Pedro", edad: 17, activo: true },
+    { nombre: "Sofía", edad: 28, activo: false },
+    { nombre: "David", edad: 22, activo: true }
+];
+
+Quiero obtener un nuevo array con:
+
+Solo usuarios activos.
+Solo usuarios con 18 años o más.
+Cada resultado debe ser un nuevo objeto con solamente:
+nombre
+edad
+
+El resultado esperado es:
+
+[
+    { nombre: "Ana", edad: 30 },
+    { nombre: "Laura", edad: 25 },
+    { nombre: "David", edad: 22 }
+]
+Condiciones
+
+Usa:
+
+filter()
+map()
+chaining
+ningún for
+
+💡 No te digo cuántos filter() necesitas. Esa decisión quiero que la tomes tú.
+*/
+
+      const usuarios = [
+        { nombre: "Ana", edad: 30, activo: true },
+        { nombre: "Carlos", edad: 19, activo: false },
+        { nombre: "Laura", edad: 25, activo: true },
+        { nombre: "Pedro", edad: 17, activo: true },
+        { nombre: "Sofía", edad: 28, activo: false },
+        { nombre: "David", edad: 22, activo: true },
+      ];
+
+      const seleccionnados = usuarios
+      .filter((usuario) => usuario.activo === true && usuario.edad >= 18)
+      .map((usuario) => {
+        return{
+            nombre: usuario.nombre,
+            edad: usuario.edad
+        }
+      });
+
+      console.log(seleccionnados);
+
+
+
+
+
+    </script>
+  </body>
+</html>
