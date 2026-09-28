@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej24</title>
+</head>
+
+<body>
+    <!--
+    
+    Prueba de consolidación
+
+Tenemos:
+
+const ventas = [
+    { producto: "Camiseta", categoria: "Ropa", cantidad: 4 },
+    { producto: "Pantalón", categoria: "Ropa", cantidad: 2 },
+    { producto: "Zapatillas", categoria: "Calzado", cantidad: 3 },
+    { producto: "Botas", categoria: "Calzado", cantidad: 5 },
+    { producto: "Gorra", categoria: "Accesorios", cantidad: 7 }
+];
+
+Quiero que obtengas:
+
+{
+    Ropa: 6,
+    Calzado: 8,
+    Accesorios: 7
+}
+Reglas
+Solo reduce()
+No filter()
+No map()
+No for
+No te voy a dar la solución.
+Puedes utilizar lo que acabamos de aprender.
+
+Hazlo tú y pégame tu código tal cual te salga, incluso si crees que está mal.
+    
+    -->
+
+
+    <script>
+
+
+        const ventas = [
+            { producto: "Camiseta", categoria: "Ropa", cantidad: 4 },
+            { producto: "Pantalón", categoria: "Ropa", cantidad: 2 },
+            { producto: "Zapatillas", categoria: "Calzado", cantidad: 3 },
+            { producto: "Botas", categoria: "Calzado", cantidad: 5 },
+            { producto: "Gorra", categoria: "Accesorios", cantidad: 7 }
+        ];
+
+        const resultado = ventas.reduce((acumulador, venta) => {
+            acumulador[venta.categoria] = (acumulador[venta.categoria] || 0) + venta.cantidad;
+            return acumulador;
+        }, {});
+        console.log(resultado);
+
+
+
+
+    </script>
+</body>
+
+</html>

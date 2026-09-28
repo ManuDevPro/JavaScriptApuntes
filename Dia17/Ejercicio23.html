@@ -9,14 +9,7 @@
 
 <body>
     <!--
-    
-    🟦 reduce() — construir información
-
-Hasta ahora has utilizado reduce() para terminar en un número.
-
-Ahora quiero que hagas algo diferente:
-
-usar reduce() para construir un objeto.
+    Reto actual — reduce() construyendo un objeto
 
 Tenemos estas ventas:
 
@@ -30,9 +23,7 @@ const ventas = [
 ];
 🎯 Objetivo
 
-Queremos saber cuántas unidades se han vendido de cada categoría.
-
-El resultado debe ser un objeto parecido a:
+Usando SOLO reduce(), sin filter(), map() ni for, queremos obtener:
 
 {
     Tecnologia: 10,
@@ -41,36 +32,69 @@ El resultado debe ser un objeto parecido a:
 
 Porque:
 
-Tecnologia → 2 + 5 + 3 = 10
-Audio      → 10 + 4 + 6 = 20
-🧠 El reto
+Tecnología → 2 + 5 + 3 = 10
+Audio → 10 + 4 + 6 = 20
+Reglas
 
-Esta vez solo necesitas:
+Quiero que tú escribas el código.
 
-reduce()
+No te voy a dar la solución todavía.
 
-No filter(), no map(), no for.
+Primera pregunta:
 
-Pero hay una diferencia importante respecto a los reduce() anteriores:
-
-Antes hacíamos:
-
-0 → 10 → 20 → 30
-
-Ahora el acumulador no será un número.
-
-Será un objeto que iremos construyendo.
-
-No te voy a dar la estructura del reduce().
-
-Piensa en estas dos preguntas:
-
-¿Con qué valor inicial debería empezar el acumulador si quiero construir un objeto?
-En cada venta, ¿cómo puedo acceder a la categoría y aumentar su cantidad?
-
-Hazlo desde cero.
+Si el acumulador va a terminar siendo un objeto, ¿qué valor inicial debería tener el reduce()?
     
     -->
+
+    <script>
+
+
+
+        const ventas = [
+            { producto: "Laptop", categoria: "Tecnologia", cantidad: 2 },
+            { producto: "Ratón", categoria: "Tecnologia", cantidad: 5 },
+            { producto: "Teclado", categoria: "Tecnologia", cantidad: 3 },
+            { producto: "Auriculares", categoria: "Audio", cantidad: 10 },
+            { producto: "Micrófono", categoria: "Audio", cantidad: 4 },
+            { producto: "Altavoz", categoria: "Audio", cantidad: 6 }
+        ];
+
+        
+        const resultado = ventas.reduce((acumulador, venta) => {
+            acumulador[venta.categoria] = (acumulador[venta.categoria] || 0) + venta.cantidad;
+            return acumulador;
+        }, {});
+
+        console.log(resultado);
+
+        // const acumulador = {}
+        // const venta = {
+        //     categoria: "Tecnologia",
+        //     cantidad: 2
+        // };
+        // acumulador[venta.categoria] = (acumulador[venta.categoria] || 0) + venta.cantidad;
+
+
+
+        // const venta2 = {
+        //     categoria: "Tecnologia",
+        //     cantidad: 5,
+        // }
+        // acumulador[venta2.categoria] = (acumulador[venta2.categoria] || 0) + venta2.cantidad;
+
+        // console.log(acumulador)
+
+
+    </script>
+
+    <!--
+
+Cuando vemos ||0 significa que si no existe entonces lo susttituya por 0
+
+-->
+
+
+
 </body>
 
 </html>

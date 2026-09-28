@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej25</title>
+</head>
+
+<body>
+    <!--
+    
+    nivel integración
+
+Tenemos:
+
+const productos = [
+    { nombre: "Laptop", categoria: "Tecnologia", precio: 1200, stock: 5 },
+    { nombre: "Ratón", categoria: "Tecnologia", precio: 25, stock: 8 },
+    { nombre: "Teclado", categoria: "Tecnologia", precio: 80, stock: 0 },
+    { nombre: "Monitor", categoria: "Tecnologia", precio: 300, stock: 2 },
+    { nombre: "Auriculares", categoria: "Audio", precio: 60, stock: 10 },
+    { nombre: "Micrófono", categoria: "Audio", precio: 150, stock: 4 }
+];
+
+Quiero que obtengas el valor total del inventario disponible de cada categoría.
+
+Es decir:
+
+{
+    Tecnologia: 6640,
+    Audio: 1200
+}
+
+Reglas de Rubí 👩🏻‍💻
+
+Esta vez puedes utilizar:
+
+reduce()
+filter()
+map()
+chaining
+
+Pero hay una condición:
+
+No quiero que copies mentalmente el ejercicio anterior. Quiero que pienses qué información necesitas conservar para poder calcular precio × stock.
+
+Y una segunda condición:
+
+No te voy a dar la estructura.
+
+Si te equivocas, perfecto. Ahí es donde voy a intervenir.
+
+🎯 Tu misión
+
+Escribe el código completo y pégamelo.
+
+No busques la solución en Internet.
+No me preguntes todavía cómo hacerlo.
+
+Piensa primero.
+
+Yo estoy aquí para revisarlo. Y esta vez quiero ver cuánto puedes construir tú solo. 😏
+    
+    
+    -->
+
+
+
+    <script>
+
+
+
+        const productos = [
+            { nombre: "Laptop", categoria: "Tecnologia", precio: 1200, stock: 5 },
+            { nombre: "Ratón", categoria: "Tecnologia", precio: 25, stock: 8 },
+            { nombre: "Teclado", categoria: "Tecnologia", precio: 80, stock: 0 },
+            { nombre: "Monitor", categoria: "Tecnologia", precio: 300, stock: 2 },
+            { nombre: "Auriculares", categoria: "Audio", precio: 60, stock: 10 },
+            { nombre: "Micrófono", categoria: "Audio", precio: 150, stock: 4 }
+        ];
+
+        const total = productos
+        .reduce((acumulador, producto) => {
+            acumulador[producto.categoria] = (acumulador[producto.categoria]||0) + producto.precio * producto.stock;
+            return acumulador;
+        }, {});
+
+        console.log(total);
+
+
+
+    </script>
+</body>
+
+</html>
