@@ -10,16 +10,7 @@
 <body>
     <!--
     
-    ahora sí. 😏 Se acabó el recreo, Manu.
-
-Pero antes de lanzarte otro ejercicio, voy a aprovechar lo que acabas de demostrar: ya puedes hacer reduce() para agrupar y acumular valores dentro de un objeto dinámicamente.
-
-Ahora quiero subir solo un escalón, no cinco.
-
-🧪 Reto — reduce() + condición
-
-Tenemos:
-
+    Ejercicio final — Día 17
 const ventas = [
     { producto: "Laptop", categoria: "Tecnologia", cantidad: 2, precio: 1200 },
     { producto: "Ratón", categoria: "Tecnologia", cantidad: 5, precio: 25 },
@@ -28,8 +19,9 @@ const ventas = [
     { producto: "Micrófono", categoria: "Audio", cantidad: 4, precio: 150 },
     { producto: "Altavoz", categoria: "Audio", cantidad: 6, precio: 90 }
 ];
+🎯 Tu misión
 
-Quiero que utilices solo reduce() para obtener el valor total vendido por categoría, pero solo contando ventas cuya cantidad sea mayor o igual a 5.
+Usa únicamente reduce() para obtener el valor total vendido por categoría, pero solo contando las ventas cuya cantidad sea igual o mayor que 5.
 
 El resultado esperado es:
 
@@ -37,27 +29,43 @@ El resultado esperado es:
     Tecnologia: 125,
     Audio: 1140
 }
-Una pista, pero pequeña 👀
+🔑 Pista mínima
 
-No necesitas filter().
+Dentro del reduce() necesitarás comprobar primero:
 
-Dentro del reduce() puedes decidir si una venta se acumula o no:
-
-if (condición) {
+if (condicion) {
     acumular
 }
 
-Y recuerda lo que acabas de dominar:
+Y recuerda cómo acceder dinámicamente a la categoría:
 
 acumulador[venta.categoria]
 
-No te voy a dar más.
-
-Piensa → escribe → ejecuta → tráeme el resultado.
-
-Y si sale mal, perfecto. Ahí entra la profesora. 😏
+Nada más. 😏
     
     -->
+    <script>
+
+
+        const ventas = [
+            { producto: "Laptop", categoria: "Tecnologia", cantidad: 2, precio: 1200 },
+            { producto: "Ratón", categoria: "Tecnologia", cantidad: 5, precio: 25 },
+            { producto: "Teclado", categoria: "Tecnologia", cantidad: 3, precio: 80 },
+            { producto: "Auriculares", categoria: "Audio", cantidad: 10, precio: 60 },
+            { producto: "Micrófono", categoria: "Audio", cantidad: 4, precio: 150 },
+            { producto: "Altavoz", categoria: "Audio", cantidad: 6, precio: 90 }
+        ];
+
+        const resultado = ventas.reduce((acumulador, venta) => {
+            if (venta.cantidad >= 5) {
+                acumulador[venta.categoria] = (acumulador[venta.categoria] || 0) + (venta.cantidad * venta.precio);
+            };
+            return acumulador;
+        }, {});
+        console.log(resultado);
+
+
+    </script>
 </body>
 
 </html>
