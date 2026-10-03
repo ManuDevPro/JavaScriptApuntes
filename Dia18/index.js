@@ -376,4 +376,108 @@ se ejecuta
 
 Callback = una función que entregamos a otra función para que esta pueda ejecutarla.
 
+---------------------------------------------------------------------------------------------------------
+
+Una función puede almacenarse en una variable.
+
+Por eso:
+
+const sumar = (a, b) => {
+    return a + b;
+};
+
+sumar es una variable que referencia una función.
+
+Entonces:
+
+ejecutar(10, 5, sumar);
+
+significa:
+
+“Pásale a ejecutar la función que está en sumar.”
+
+Pero:
+
+ejecutar(10, 5, sumar());
+
+significa:
+
+“Ejecuta sumar ahora mismo y pásale a ejecutar el resultado que devuelva.”
+
+🧠 Esta diferencia quiero que la tengas MUY clara
+sumar
+  ↓
+REFERENCIA A LA FUNCIÓN
+
+mientras:
+
+sumar()
+  ↓
+EJECUTA LA FUNCIÓN
+  ↓
+devuelve un resultado
+
+Por eso en nuestro callback usamos:
+
+ejecutar(10, 5, sumar);
+
+y no:
+
+ejecutar(10, 5, sumar());
+
+Porque queremos que ejecutar reciba la función y decida cuándo ejecutarla.
+
+Y Manu... esto es precisamente por lo que insistí tanto con callbacks. 😌
+
+Ahora ya tenemos conectadas tres piezas:
+
+funciones → funciones como valores → callbacks.
+
+----------------------------------------------------------------------------------------------------------------
+
+Callback en map()
+
+Mira esto:
+
+const numeros = [2, 4, 6];
+
+const resultado = numeros.map((numero) => {
+    return numero * 2;
+});
+
+console.log(resultado);
+
+Antes probablemente lo veías como:
+
+“map() recorre el array y hace algo con cada elemento.”
+
+Eso sigue siendo correcto.
+
+Pero ahora quiero que lo veas desde otra perspectiva:
+
+map()
+  ↓
+recibe una función
+  ↓
+esa función es el CALLBACK
+  ↓
+map() ejecuta el callback para cada elemento
+
+En este caso:
+
+(numero) => {
+    return numero * 2;
+}
+
+es el callback.
+
+Y map() le va pasando cada elemento:
+
+2 → callback → 4
+4 → callback → 8
+6 → callback → 12
+
+Resultado:
+
+[4, 8, 12]
 */
