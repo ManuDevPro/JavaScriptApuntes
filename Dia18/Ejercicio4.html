@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej4</title>
+</head>
+
+<body>
+    <!--
+    
+    Quiero que construyas:
+
+operar(20, 4, FUNCIÓN)
+
+pero esta vez la función callback debe hacer una división.
+
+El resultado tiene que ser:
+
+5
+
+Hazlo tú desde cero, como acabas de hacer con el ejercicio anterior.
+
+    -->
+    <script>
+
+
+        const operar = (a , b , funcion)=> {
+            return funcion(a , b);
+        };
+
+        const resultado = operar(20, 4, (numero1, numero2) => {
+            return numero1 / numero2;
+        });
+
+        console.log(resultado);
+
+
+    </script>
+</body>
+
+</html>

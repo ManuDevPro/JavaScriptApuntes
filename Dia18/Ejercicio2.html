@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej2</title>
+</head>
+<body>
+    <!--
+    Crea esta función:
+
+calcular
+
+Debe recibir:
+
+dos números
+una función que indique qué operación hacer
+
+Y quiero poder usarla así:
+
+calcular(10, 5, (a, b) => {
+    return a - b;
+});
+
+El resultado debería ser:
+
+5
+
+Esta vez sí puedes construirla con la estructura que acabamos de entender.
+    -->
+
+
+    <script>
+
+        const calcular = (a, b, operacion)=>{
+            return operacion(a, b);
+        };
+
+        const resultado = calcular(10, 5, (numero1, numero2) => {
+            return numero1 - numero2;
+        });
+
+        console.log(resultado);
+
+        
+    </script>
+</body>
+</html>

@@ -241,6 +241,139 @@ map() recibe un callback.
 Llevas utilizando callbacks desde hace varios días.
 
 La diferencia es que ahora ya sabes qué son y qué está ocurriendo detrás. 🔥
+----------------------------------------------------------------------------------------------------------------
 
+Tenemos:
+
+const ejecutarOperacion = (a, b, operacion) => {
+    return operacion(a, b);
+};
+
+Y llamamos:
+
+ejecutarOperacion(10, 5, ...);
+
+Ya sabes que:
+
+a = 10
+b = 5
+
+Ahora falta entender qué es operacion.
+
+Si hacemos:
+
+ejecutarOperacion(10, 5, (numero1, numero2) => {
+    return numero1 + numero2;
+});
+
+entonces:
+
+a         → 10
+b         → 5
+operacion → (numero1, numero2) => numero1 + numero2
+
+Y cuando dentro de ejecutarOperacion aparece:
+
+return operacion(a, b);
+
+es como si dijéramos:
+
+"Ejecuta la función que recibí (operacion) y dale a y b."
+
+Por tanto, esa función recibe:
+
+numero1 = 10
+numero2 = 5
+
+y hace:
+
+return numero1 + numero2;
+
+Resultado: 15.
+
+🧠 Quédate solamente con esta imagen
+ejecutarOperacion(10, 5, FUNCIÓN)
+             ↓
+        a = 10
+        b = 5
+        operacion = FUNCIÓN
+             ↓
+       operacion(a, b)
+             ↓
+       FUNCIÓN(10, 5)
+
+Eso es todo lo que estamos aprendiendo ahora.
+--------------------------------------------------------------------------------------------------------
+
+Ahora quiero que veas por qué esto es tan útil.
+
+Mira:
+
+const operar = (a, b, operacion) => {
+    return operacion(a, b);
+};
+
+La función operar no sabe qué operación va a realizar.
+
+Y eso es precisamente lo interesante.
+
+Podemos darle una función diferente cada vez:
+
+operar(10, 5, (a, b) => {
+    return a + b;
+});
+
+→ suma
+
+operar(10, 5, (a, b) => {
+    return a - b;
+});
+
+→ resta
+
+operar(10, 5, (a, b) => {
+    return a * b;
+});
+
+→ multiplicación
+
+La función operar sigue siendo la misma.
+
+Lo único que cambia es la función que le entregamos.
+--------------------------------------------------------------------------------------------------
+Un callback es una función que se pasa como argumento a otra función para que esa otra función pueda ejecutarla en algún momento.
+
+Mira nuestro ejemplo:
+
+const operar = (a, b, funcion) => {
+    return funcion(a, b);
+};
+
+Aquí operar es la función que recibe.
+
+Y cuando hacemos:
+
+operar(20, 4, (numero1, numero2) => {
+    return numero1 / numero2;
+});
+
+la función que estamos pasando:
+
+(numero1, numero2) => {
+    return numero1 / numero2;
+}
+
+es el callback.
+
+Por tanto:
+
+FUNCIÓN PRINCIPAL
+      ↓ recibe
+   CALLBACK
+      ↓
+se ejecuta
+🧠 Una frase para que se te quede
+
+Callback = una función que entregamos a otra función para que esta pueda ejecutarla.
 
 */

@@ -9,12 +9,34 @@
 
 <body>
     <!--
-    
+    Completa únicamente esta parte:
+
+const ejecutarOperacion = (a, b, operacion) => {
+    return operacion(a, b);
+};
+
+const resultado = ejecutarOperacion(10, 5, (numero1, numero2) => {
+    // ¿qué tienes que poner aquí para obtener 15?
+});
+
+console.log(resultado);
+
+No cambies la función ejecutarOperacion.
+
+Solo completa el callback para que resultado sea 15.
+
+Pista mínima: necesitas utilizar numero1 y numero2.
     -->
 
     <script>
+        const ejecutarOperacion = (a, b, operacion) => {
+            return operacion(a, b);
+        };
 
-        
+        const resultado = ejecutarOperacion(10, 5, (numero1, numero2) => {
+            return numero1 + numero2;
+        });
+        console.log(resultado);
 
 
     </script>

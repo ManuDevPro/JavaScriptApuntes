@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej3</title>
+</head>
+<body>
+    <!--
+    
+    Callback
+
+Quiero una función llamada operar que reciba:
+
+a
+b
+operacion
+
+Y que ejecute la operación que reciba.
+
+Después, quiero llamarla pasando 15, 3 y una función que reste los dos números.
+
+El resultado debería ser:
+
+12
+
+No te doy la estructura esta vez. Quiero ver si puedes reconstruirla con lo que acabamos de aprender.
+
+Escríbelo tú y me lo pasas. 👀
+    
+    -->
+
+
+    <script>
+
+
+        const operar = (a, b, operacion) => {
+            return operacion(a,b);
+        };
+
+        const resultado = operar(15, 3, (a, b) => {
+            return a - b;
+        });
+
+        console.log(resultado);
+
+
+    </script>
+</body>
+</html>

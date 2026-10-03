@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej5</title>
+</head>
+<body>
+    <!--
+    
+    Crea desde cero:
+
+calcularResultado(a, b, operacion)
+
+Debe ejecutar el callback que reciba.
+
+Después llámala pasando:
+
+18
+6
+un callback que divida los dos números.
+
+Resultado esperado:
+
+3
+
+Y quiero que, después de escribirlo, me expliques brevemente el recorrido:
+
+qué recibe a, qué recibe b, qué recibe operacion y qué ocurre cuando ejecutamos operacion(a, b).
+
+Nada más.
+
+Te vas a tomar tu café ☕, vuelves con el código, y Rubí continúa exactamente desde donde lo dejamos. 😏
+
+Ahora sí: a trabajar, programador. 💻🔥
+    
+    -->
+
+    <script>
+
+        const calcularResultado = (a, b, operacion)=> {
+            return operacion(a,b);
+        };
+
+        const resultado = calcularResultado(18, 6, (primeroNumero, segundoNumero)=> {
+            return primeroNumero / segundoNumero;
+        });
+
+        console.log(resultado);
+        /*
+        Explicación:
+        En la funcion original: a recibe como valor a 18; b recibe como valor 6; operacion es la funcion callback que luego retorna al ejercutarse con operacion(a,b); luego en la funcion calback: colocamos los valores callback y promerNumero y segundoNumero hacen la operacion requerida con los valores declarados anteriormente, en este caso dividen
+        */
+
+    </script>
+</body>
+</html>
