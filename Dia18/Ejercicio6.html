@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ej6</title>
 </head>
+
 <body>
     <!--
     
-    
+    Sin copiar el ejemplo anterior, escribe tú una función llamada:
+
+procesar
+
+que reciba un callback y lo ejecute.
+
+Después úsala para que termine devolviendo:
+
+"Estoy aprendiendo JavaScript"
+
+Desde cero, sin mirar el ejemplo anterior.
+
+Quiero ver si tu cerebro ya está empezando a construir automáticamente:
+
+parámetro → callback → () → ejecución → return.
     
     -->
 
     <script>
 
-        
+        const procesar = (operacion) => {
+            return operacion();
+        };
+
+        const resutado = procesar(() => {
+            return "Estoy aprendiendo JavaScript";
+        });
+
+        console.log(resutado);
 
     </script>
 </body>
+
 </html>

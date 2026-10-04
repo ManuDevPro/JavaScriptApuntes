@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej7</title>
+</head>
+
+<body>
+    <!--
+    
+    Ahora sin mirar el ejemplo anterior, crea tú:
+
+procesar(8, callback)
+
+y haz que el callback reciba ese 8 y lo eleve al cuadrado.
+
+Resultado esperado:
+
+64
+
+No te doy la estructura. Quiero que tu cerebro la reconstruya.
+    
+    -->
+
+
+    <script>
+
+        const procesar = (a, numero) => {
+            return numero(a);
+        };
+
+        const resultado = procesar(8, (numero) => {
+            return numero ** 2;
+        });
+
+        console.log(resultado);
+
+    </script>
+</body>
+
+</html>

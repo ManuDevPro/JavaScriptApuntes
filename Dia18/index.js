@@ -480,4 +480,160 @@ Y map() le va pasando cada elemento:
 Resultado:
 
 [4, 8, 12]
+
+----------------------------------------------------------------------------------------------------------------------------
+Ahora subimos un nivel
+
+Hasta ahora el callback no recibía datos.
+
+Ahora quiero que veas esto:
+
+const procesar = (numero, operacion) => {
+    return operacion(numero);
+};
+
+const resultado = procesar(10, (valor) => {
+    return valor * 2;
+});
+
+console.log(resultado);
+
+No lo ejecutes todavía.
+
+Quiero que me expliques qué ocurre paso a paso, especialmente:
+
+¿Qué recibe numero?
+¿Qué recibe operacion?
+¿Qué valor recibe valor?
+¿Quién le pasa ese valor a valor?
+¿Qué devuelve finalmente resultado?
+
+Aquí vamos a conectar lo que ya dominaste con callbacks que reciben argumentos. Este es el siguiente escalón. 😈
+
+Si se está viendo callbacks en JavaScript, aquí hay otra opción de formación en datos.
+
+Formación Online Big Data S.L.
+
+4,9/5 en Google: fórmate con PontIA
+
+4,9/5 en Google. Profesores en activo en BBVA y Google. Máster en Data Analytics 100% práctico.
+
+Anuncio
+Más opciones
+numero recibe el valor de 10;       operacion recibe el valor de numero, o sea, 10;       valor recibe el callback y a su ves el numero 10, o sea, la operacion a realizar, y el valor se lo pasa el callback;        el resultado final es 20 porque multiplica el valor del numero que es 10 por 2       
+👀
+
+Manu, el resultado y la mayor parte del razonamiento están perfectos. 🔥 Solo hay que corregir una distinción técnica importante, porque justamente esto es lo que quiero que domines.
+
+Vamos línea por línea
+
+1. numero recibe 10.
+
+✅ Correcto.
+
+procesar(10, ...)
+
+Por tanto:
+
+numero = 10
+
+2. operacion recibe el callback.
+
+Aquí está la corrección importante. 🧐
+
+Tú dijiste:
+
+"operacion recibe el valor de numero, o sea, 10"
+
+❌ No.
+
+operacion recibe la función callback:
+
+(valor) => {
+    return valor * 2;
+}
+
+Así que:
+
+numero     → 10
+operacion  → función callback
+
+Y después ocurre esto:
+
+operacion(numero);
+
+Como numero vale 10, es como si ejecutáramos:
+
+(valor) => {
+    return valor * 2;
+}(10)
+
+Por eso...
+
+3. valor recibe 10.
+
+✅ Exactamente.
+
+El 10 se pasa desde:
+
+operacion(numero)
+
+hacia el parámetro del callback:
+
+(valor)
+
+Así que:
+
+numero → 10
+       ↓
+operacion(numero)
+       ↓
+valor → 10
+
+4. ¿Quién le pasa el 10 a valor?
+
+Aquí quiero que cambies una pequeña cosa de vocabulario:
+
+❌ "El callback le pasa el valor."
+
+✅ procesar invoca el callback y le pasa numero como argumento.
+
+Es decir:
+
+return operacion(numero);
+
+5. Resultado final: 20.
+
+✅ Perfecto.
+
+El callback recibe 10:
+
+return valor * 2;
+
+Entonces:
+
+10 × 2 = 20
+🧠 Qué quiero que te quede grabado
+
+Esta estructura:
+
+const procesar = (numero, operacion) => {
+    return operacion(numero);
+};
+
+significa:
+
+"Recibo un dato y una función. Después ejecuto esa función utilizando ese dato."
+
+Y esto:
+
+procesar(10, (valor) => {
+    return valor * 2;
+});
+
+significa:
+
+"Aquí tienes el 10 y aquí tienes la función que quiero que utilices con ese 10."
+
+Y Manu, fíjate en algo importante: hace un rato necesitabas que desmontáramos completamente los callbacks. Ahora estás siguiendo una cadena de valores entre funciones. Eso es progreso real. 💪
 */
