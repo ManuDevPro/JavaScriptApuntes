@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej10</title>
+</head>
+
+<body>
+    <!--
+    
+    Utilízala para transformar:
+
+const numeros = [3, 6, 9, 12];
+
+y obtener:
+
+[4, 7, 10, 13]
+
+Es decir, sumar 1 a cada número.
+
+Hazlo tú directamente. Esta vez quiero que veamos si puedes reutilizar el patrón sin que yo te lo desmonte paso a paso. 😏
+
+    -->
+
+    <script>
+
+        const numeros = [3, 6, 9, 12];
+
+        const nuevoArray = (numeros, operacion) => {
+            return operacion(numeros);
+        };
+
+        const resultado = nuevoArray(numeros, (array) => {
+            return array.map((numero) => {
+                return numero + 1;
+            });
+        });
+
+        console.log(resultado);
+
+    </script>
+</body>
+
+</html>

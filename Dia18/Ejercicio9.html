@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej9</title>
+</head>
+<body>
+    <!--
+    
+    Usa procesarArray() para recibir [5, 10, 15, 20] y conseguir [25, 50, 75, 100].
+
+Multiplica cada número por 5.
+
+Esta vez intenta escribirlo directamente.
+    
+    -->
+
+    <script>
+
+        const numeros = [5, 10, 15, 20];
+
+        const procesarArray = (numeros, operacion) => {
+            return operacion(numeros);
+        };
+
+        const resultado = procesarArray(numeros, (array)=>{
+            return array.map((numero)=>{
+                return numero * 5;
+            });
+        });
+
+
+        console.log(resultado);
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej8</title>
+</head>
+
+<body>
+    <!--
+    Tenemos estos números:
+
+const numeros = [2, 4, 6, 8];
+
+Crea una función llamada procesarArray que reciba:
+
+El array.
+Un callback.
+
+La función debe utilizar el callback para transformar cada número del array y devolver un nuevo array.
+
+Después utiliza procesarArray() para multiplicar todos los números por 3.
+
+Resultado esperado:
+
+[6, 12, 18, 24]
+
+💡 Pista mínima: ya conoces un método que recorre un array y ejecuta un callback sobre cada elemento. 😉
+    -->
+
+    <script>
+
+        const numeros = [2, 4, 6, 8];
+
+        const procesarArray = (numeros, operacion) => {
+            return operacion(numeros);
+        };
+
+        const resultado = procesarArray(numeros, (numero) => {
+            return numero.map((numero) => {
+                return numero * 3
+            });
+        });
+
+        console.log(resultado);
+
+
+
+    </script>
+</body>
+
+</html>
